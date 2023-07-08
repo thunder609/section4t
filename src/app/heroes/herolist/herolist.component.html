@@ -1,0 +1,13 @@
+<p>herolist works!</p>
+<div *ngIf="ultimoborrado; else nobrrado">
+<h3>heroe borrado <small></small>{{ultimoborrado}}</h3>
+</div>
+  
+<ng-template #nobrrado>
+<h3>no ha borrado nada</h3>
+</ng-template>
+
+<button *ngIf="superheroes.length >0"  (click)="borrarultimo()">borrar el ultimo heroe</button>
+<ul>
+  <li *ngFor="let item of superheroes">{{item}}</li>
+</ul>

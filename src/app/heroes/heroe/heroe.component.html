@@ -1,0 +1,15 @@
+<h1>Spirderman</h1>
+
+<dl>
+  <td>Nombre</td>
+  <dd>{{this.name}}</dd>
+  <dd>{{CapitalizeName}}</dd>
+  <td>edad</td>
+  <dd *ngIf="this.age >18">{{this.age}}</dd>
+  <td>Description</td>
+  <dd>{{getDescription()}}</dd>
+</dl>
+<button class primary (click)="changeHer()">Cambiar Nombre</button>
+<button (click)="changeAge()">Cambiar Edad</button>
+
+
