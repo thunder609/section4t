@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Personaje } from '../interface/personaje.interface';
+import { DbzService } from '../services/dbz.services';
 
 @Component({
   selector: 'app-dbz-main-page',
@@ -6,7 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class MainDragonBallComponent  {
-  
+   constructor(private dbzService:DbzService){
 
-  ngOnInit() { }
+   }
+   get personajes():Personaje[]{
+    return  [...this.dbzService.personajes]
+     }
+    onBorradoPersonajesById(id:string):void{
+        this.dbzService.borradoPersonajeByID(id);
+    }
+    onNuevoPersonajes(personaje:Personaje):void{
+        this.dbzService.onNuevoPersonaje(personaje);
+    }
 }

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MainDragonBallComponent } from './pages/main-dbz-components';
 import { ListComponent } from './components/list/list.component';
 import { AgregarPersonajeComponent } from './components/agregar-personaje/agregar-personaje.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -14,6 +15,7 @@ import { AgregarPersonajeComponent } from './components/agregar-personaje/agrega
   ],
   imports: [
     CommonModule,
+    FormsModule
   ],
   exports:[
     MainDragonBallComponent
