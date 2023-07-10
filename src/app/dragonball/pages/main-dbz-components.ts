@@ -18,6 +18,6 @@ export class MainDragonBallComponent  {
         this.dbzService.borradoPersonajeByID(id);
     }
     onNuevoPersonajes(personaje:Personaje):void{
-        this.dbzService.onNuevoPersonaje(personaje);
+      this.dbzService.onNuevoPersonaje(personaje);
     }
 }
